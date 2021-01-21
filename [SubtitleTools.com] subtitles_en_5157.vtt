@@ -1,0 +1,169 @@
+﻿WEBVTT
+
+00:00:09.000 --> 00:00:14.600
+in this video I'll discuss intelligent agents understanding intelligent
+
+00:00:14.600 --> 00:00:17.700
+agents are an important part of understanding the field
+
+00:00:17.700 --> 00:00:21.600
+of AI so what are they well the definition
+
+00:00:21.600 --> 00:00:24.700
+of an intelligent agent is any entity that lives
+
+00:00:24.700 --> 00:00:27.600
+in an environment and uses sensors to build a
+
+00:00:27.600 --> 00:00:31.700
+percept or uses actuators to interact with the environment
+
+00:00:31.700 --> 00:00:35.600
+that will that make sound pretty intimidating be short
+
+00:00:35.600 --> 00:00:38.800
+definition is a bit friendlier and intelligent Asian is
+
+00:00:38.800 --> 00:00:41.400
+anything that waits for some sort of external stimulus
+
+00:00:41.400 --> 00:00:44.800
+and input and then acts upon the stimulus and
+
+00:00:44.800 --> 00:00:49.500
+put this diagram describes the basic functionality of intelligent
+
+00:00:49.500 --> 00:00:52.900
+agent so let's try to understand what it describes
+
+00:00:53.400 --> 00:00:58.500
+the term perception refers to an agent's current perception
+
+00:00:58.500 --> 00:01:01.900
+of the environment using sensors for example it can
+
+00:01:01.900 --> 00:01:04.500
+measure the state of the environment sensors can be
+
+00:01:04.500 --> 00:01:07.300
+anything that measure something so a bimetallic strip in
+
+00:01:07.300 --> 00:01:11.200
+a thermostat a barometer for measuring atmospheric pressure a
+
+00:01:11.200 --> 00:01:16.100
+Sonic sensor touch sensor proximity sensor the sniffer sensor
+
+00:01:16.100 --> 00:01:19.100
+you name it now there countless kinds of sensors
+
+00:01:19.100 --> 00:01:22.200
+used in countless day today avocations and each one
+
+00:01:22.200 --> 00:01:25.700
+has a common feature it measures something often in
+
+00:01:25.700 --> 00:01:28.500
+a digital manner that means they can be trained
+
+00:01:28.500 --> 00:01:31.500
+to attack of State in an environment detecting of
+
+00:01:31.500 --> 00:01:34.100
+audio levels increase past a certain number of decibels
+
+00:01:34.100 --> 00:01:34.900
+for example
+
+00:01:35.200 --> 00:01:40.000
+the agent then acts based on triggered events turning
+
+00:01:40.000 --> 00:01:42.300
+down the volume to an acceptable level to use
+
+00:01:42.300 --> 00:01:45.600
+my basic example and it is a base example
+
+00:01:45.600 --> 00:01:48.800
+agents can have multiple actions often sequences they have
+
+00:01:48.800 --> 00:01:52.400
+to actuate but more than that perception have a
+
+00:01:52.400 --> 00:01:56.900
+store sequence that is an agent's percept history every
+
+00:01:56.900 --> 00:02:00.800
+Audio Level ever recorded by that perceptive example that
+
+00:02:00.800 --> 00:02:03.000
+means that a percept could be used to train
+
+00:02:03.000 --> 00:02:05.800
+a system how to act over time based on
+
+00:02:05.800 --> 00:02:07.800
+that history learned in other words
+
+00:02:08.200 --> 00:02:12.200
+and that leads to rational agents as the name
+
+00:02:12.200 --> 00:02:16.000
+indicates rational agents are agents that act rashly doing
+
+00:02:16.000 --> 00:02:19.300
+the right thing by taking actions to maximize performance
+
+00:02:19.300 --> 00:02:23.100
+operate more efficiently overtime as a storm or data
+
+00:02:23.100 --> 00:02:25.600
+in their histories but how do we tell the
+
+00:02:25.600 --> 00:02:28.600
+agent what the right thing to do is well
+
+00:02:28.600 --> 00:02:32.000
+we use performance measures agents perform actions based on
+
+00:02:32.000 --> 00:02:35.700
+their perception those actions create an end-state turn down
+
+00:02:35.700 --> 00:02:37.900
+the volume keep in mind that we focus on
+
+00:02:37.900 --> 00:02:40.000
+the state of the environment not the agent because
+
+00:02:40.000 --> 00:02:43.600
+it's the environments State that's important we don't want
+
+00:02:43.600 --> 00:02:45.500
+the agent deciding how good a job is doing
+
+00:02:45.500 --> 00:02:48.000
+so the agent can be used to determine how
+
+00:02:48.000 --> 00:02:50.900
+desirable that Penn State is is the volume at
+
+00:02:50.900 --> 00:02:55.300
+an acceptable level D Performance measures capture those determinations
+
+00:02:55.300 --> 00:02:58.500
+used to Graton agent on how well it's done
+
+00:02:58.500 --> 00:03:01.000
+and the more time that is past the more
+
+00:03:01.000 --> 00:03:04.800
+information can be used to generate performance measures meaning
+
+00:03:04.800 --> 00:03:07.700
+that agents can get better over time by virtue
+
+00:03:07.700 --> 00:03:08.100
+of their
+
+00:03:08.200 --> 00:03:09.200
+learned behavior
