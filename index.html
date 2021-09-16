@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML 5 Boilerplate</title>
+  <link rel="stylesheet" href="https://captcha.futuretalentplatform.com/securimage/securimage.css" media="screen">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <form method="post" action="https://captcha.futuretalentplatform.com/securimage/captcha_check.php">
+    <img style="float: left; padding-right: 5px" id="captcha_image" src="https://captcha.futuretalentplatform.com/securimage/securimage_show.php" alt="CAPTCHA Image">
+    <div id="captcha_image_audio_div">
+      <audio id="captcha_image_audio" preload="none" style="display: none">
+        <source id="captcha_image_source_wav" src="https://captcha.futuretalentplatform.com/securimage/securimage_play.php?id=1234" type="audio/wav">
+        <object type="application/x-shockwave-flash"
+          data="https://captcha.futuretalentplatform.com/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=https://captcha.futuretalentplatform.com/securimage/securimage_play.php"
+          height="32" width="32">
+          <param name="movie"
+            value="https://captcha.futuretalentplatform.com/securimage/securimage_play.swf?bgcol=%23ffffff&amp;icon_file=images%2Faudio_icon.png&amp;audio_file=https://captcha.futuretalentplatform.com/securimage/securimage_play.php" />
+        </object>
+      </audio>
+    </div>
+    <div id="captcha_image_audio_controls">
+      <a tabindex="-1" class="captcha_play_button" href="https://captcha.futuretalentplatform.com/securimage/securimage_play.php?id=1234 ?>" onclick="return false">
+        <img class="captcha_play_image" height="32" width="32" src="images/audio_icon.png" alt="Play CAPTCHA Audio"
+          style="border: 0px">
+        <img class="captcha_loading_image rotating" height="32" width="32" src="images/loading.png" alt="Loading audio"
+          style="display: none">
+      </a>
+      <noscript>Enable Javascript for audio controls</noscript>
+      <a tabindex="-1" style="border: 0" href="#" title="Refresh Image"
+        onclick="document.getElementById('captcha_image').src = 'https://captcha.futuretalentplatform.com/securimage/securimage_show.php?' + Math.random(); captcha_image_audioObj.refresh(); this.blur(); return false">
+        <img height="32" width="32" src="images/refresh.png" alt="Refresh Image" onclick="this.blur()"
+          style="border: 0px; vertical-align: bottom" />
+      </a>
+      <br>
+      <script type="text/javascript" src="https://captcha.futuretalentplatform.com/securimage/securimage.js"></script>
+      <script type="text/javascript">
+        captcha_image_audioObj = new SecurimageAudio({ audioElement: 'captcha_image_audio', controlsElement: 'captcha_image_audio_controls' });
+      </script>
+      <div style="clear: both"></div>
+
+      <label for="captcha_code">Type the text:</label>
+      <input type="text" id="ct_captcha" name="ct_captcha" id="captcha_code" />.
+      <button type="submit">submit</button>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("form").submit(function (event) {
+          var formData = {
+            ct_captcha: $("#ct_captcha").val(),
+          };
+          $.ajax({
+            type: "POST",
+            url: "https://captcha.futuretalentplatform.com/securimage/captcha_check.php",
+            data: formData,
+            dataType: "json",
+            encode: true,
+          }).done(function (data) {
+            console.log(data);
+          });
+
+          event.preventDefault();
+        });
+      });
+    </script>
+  </form>
+</body>
+
+</html>
